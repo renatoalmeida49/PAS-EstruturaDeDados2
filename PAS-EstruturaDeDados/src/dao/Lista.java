@@ -27,8 +27,8 @@ public class Lista {
     }
     
     public void adicionar(String nome, String amigo){
-        System.out.println("Bora? Adicionar?"+nome+amigo);
-        Pessoa pessoaPAdd = lista.get(amigo);
+        Pessoa pessoaPAdd = new Pessoa(); 
+        pessoaPAdd = lista.get(amigo);
         lista.get(nome).adicionaAmigo(pessoaPAdd);
         
     }

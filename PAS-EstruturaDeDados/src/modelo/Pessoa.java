@@ -7,7 +7,7 @@ public class Pessoa {
     private String cpf;
     private String sexo;
     private String email;
-    private ArrayList<String> amigos;
+    private ArrayList<Pessoa> amigos;
     
     public Pessoa(){}
     
@@ -56,10 +56,9 @@ public class Pessoa {
     }
     
     public void adicionaAmigo(Pessoa amigo){
-        System.out.println("Bora? add?"+amigo.getNome());
-        String nome = amigo.getNome();
-        System.out.println(nome);
-        this.amigos.add(nome);
+        Pessoa add = new Pessoa();
+        add = amigo;
+        this.amigos.add(add);
     }
     
         

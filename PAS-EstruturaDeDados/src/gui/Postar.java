@@ -5,6 +5,10 @@
  */
 package gui;
 
+import dao.Lista;
+import dao.Postagens;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author renat
@@ -109,6 +113,17 @@ public class Postar extends javax.swing.JFrame {
 
     private void BtnPublicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPublicarActionPerformed
         // TODO add your handling code here:
+        String pessoa = jTextNome.getText();
+        String texto = jTextAreaTextoPostagem.getText();
+        
+        if(Lista.getInstance().busca(pessoa)){
+            Postagens.getInstance().postar(pessoa, texto);
+            JOptionPane.showMessageDialog(null, "Texto adicionado!");            
+        } else {
+            JOptionPane.showMessageDialog(null, "Pessoa não está cadastrada");
+        }
+        
+        this.dispose();
     }//GEN-LAST:event_BtnPublicarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed

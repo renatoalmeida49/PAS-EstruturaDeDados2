@@ -14,4 +14,16 @@ public class Postagens {
     public void postar(String nome, String texto){
         post.put(nome, texto);
     }
+
+    @Override
+    public String toString() {
+        return "Postagens{" + "post=" + post + '}';
+    }
+    
+    public void print(){
+        for(String p : post.values()){
+            System.out.println(p);
+        }
+    }
+    
 }
