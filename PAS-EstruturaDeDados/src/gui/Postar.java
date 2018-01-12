@@ -118,12 +118,11 @@ public class Postar extends javax.swing.JFrame {
         
         if(Lista.getInstance().busca(pessoa)){
             Postagens.getInstance().postar(pessoa, texto);
-            JOptionPane.showMessageDialog(null, "Texto adicionado!");            
+            JOptionPane.showMessageDialog(null, "Texto adicionado!");
+            this.dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Pessoa não está cadastrada");
         }
-        
-        this.dispose();
     }//GEN-LAST:event_BtnPublicarActionPerformed
 
     private void BtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelarActionPerformed

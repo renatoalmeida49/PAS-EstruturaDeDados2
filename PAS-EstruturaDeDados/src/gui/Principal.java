@@ -33,6 +33,7 @@ public class Principal extends javax.swing.JFrame {
         BtnCriarConta = new javax.swing.JButton();
         BtnAdicionarAmigo = new javax.swing.JButton();
         BtnPostar = new javax.swing.JButton();
+        BtnVerPostagens = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,6 +61,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        BtnVerPostagens.setText("Ver Postagens");
+        BtnVerPostagens.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnVerPostagensActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -74,7 +82,9 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(BtnPostar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BtnCriarConta, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addComponent(BtnAdicionarAmigo)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BtnAdicionarAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnVerPostagens, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -87,7 +97,9 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(BtnAdicionarAmigo)
                     .addComponent(BtnCriarConta))
                 .addGap(18, 18, 18)
-                .addComponent(BtnPostar)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnPostar)
+                    .addComponent(BtnVerPostagens))
                 .addContainerGap(157, Short.MAX_VALUE))
         );
 
@@ -108,6 +120,11 @@ public class Principal extends javax.swing.JFrame {
         Postar pt = new Postar();
         pt.setVisible(true);
     }//GEN-LAST:event_BtnPostarActionPerformed
+
+    private void BtnVerPostagensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnVerPostagensActionPerformed
+        ExibirPostagens ep = new ExibirPostagens();
+        ep.setVisible(true);
+    }//GEN-LAST:event_BtnVerPostagensActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,6 +165,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton BtnAdicionarAmigo;
     private javax.swing.JButton BtnCriarConta;
     private javax.swing.JButton BtnPostar;
+    private javax.swing.JButton BtnVerPostagens;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

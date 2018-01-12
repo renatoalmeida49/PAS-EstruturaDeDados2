@@ -34,7 +34,10 @@
                           <Component id="BtnCriarConta" pref="109" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="BtnAdicionarAmigo" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="BtnAdicionarAmigo" max="32767" attributes="0"/>
+                          <Component id="BtnVerPostagens" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="22" max="32767" attributes="0"/>
@@ -52,7 +55,10 @@
                   <Component id="BtnCriarConta" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="BtnPostar" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="BtnPostar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="BtnVerPostagens" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace pref="157" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -89,6 +95,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnPostarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BtnVerPostagens">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ver Postagens"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnVerPostagensActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

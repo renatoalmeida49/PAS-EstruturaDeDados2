@@ -20,10 +20,21 @@ public class Postagens {
         return "Postagens{" + "post=" + post + '}';
     }
     
-    public void print(){
+    public String print(){
+        StringBuilder s = new StringBuilder();
         for(String p : post.values()){
-            System.out.println(p);
+            s.append(p);
+            s.append("\n");
         }
+        
+        return s.toString();
+    }
+    
+    public String printByName(String nome){
+        
+        String texto = post.get(nome);
+        
+        return texto;
     }
     
 }
