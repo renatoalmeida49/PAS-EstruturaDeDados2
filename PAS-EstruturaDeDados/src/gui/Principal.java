@@ -5,7 +5,7 @@
  */
 package gui;
 
-import dao.Usuarios;
+import dao.Lista;
 
 /**
  *
@@ -32,6 +32,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         BtnCriarConta = new javax.swing.JButton();
         BtnAdicionarAmigo = new javax.swing.JButton();
+        BtnPostar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,6 +53,13 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        BtnPostar.setText("Postar");
+        BtnPostar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnPostarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -59,24 +67,28 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnCriarConta)
-                    .addComponent(jLabel1))
-                .addContainerGap(290, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BtnAdicionarAmigo)
-                .addGap(101, 101, 101))
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BtnPostar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BtnCriarConta, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(BtnAdicionarAmigo)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(32, 32, 32)
-                .addComponent(BtnCriarConta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BtnAdicionarAmigo)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BtnAdicionarAmigo)
+                    .addComponent(BtnCriarConta))
+                .addGap(18, 18, 18)
+                .addComponent(BtnPostar)
+                .addContainerGap(157, Short.MAX_VALUE))
         );
 
         pack();
@@ -91,6 +103,11 @@ public class Principal extends javax.swing.JFrame {
         AdicionaAmigo aa = new AdicionaAmigo();
         aa.setVisible(true);
     }//GEN-LAST:event_BtnAdicionarAmigoActionPerformed
+
+    private void BtnPostarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPostarActionPerformed
+        Postar pt = new Postar();
+        pt.setVisible(true);
+    }//GEN-LAST:event_BtnPostarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,6 +147,7 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAdicionarAmigo;
     private javax.swing.JButton BtnCriarConta;
+    private javax.swing.JButton BtnPostar;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,7 +5,7 @@
  */
 package gui;
 
-import dao.Usuarios;
+import dao.Lista;
 import javax.swing.JOptionPane;
 import modelo.Pessoa;
 
@@ -140,7 +140,7 @@ public class CriarConta extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Campos não podem retornar vazios!");
         }
         else {
-            Usuarios.getInstance().add(usuario);
+            Lista.getInstance().add(usuario);
             
             JOptionPane.showMessageDialog(null, "Usuário cadastrado!");
         }

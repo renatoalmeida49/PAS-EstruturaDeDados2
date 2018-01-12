@@ -5,7 +5,7 @@
  */
 package gui;
 
-import dao.Usuarios;
+import dao.Lista;
 import javax.swing.JOptionPane;
 
 /**
@@ -118,13 +118,11 @@ public class AdicionaAmigo extends javax.swing.JFrame {
 
     private void BtnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdicionarActionPerformed
         String Nome = jTextQuemEVoce.getText();
-        
         String Amigo = jTextQuemVoceQuer.getText();
         
-        if(Usuarios.getInstance().busca(Nome)){
-            if(Usuarios.getInstance().busca(Amigo)){
-                //Buga na hora de adicionar o amigo no array da pessoa
-                Usuarios.getInstance().adicionar(Nome, Amigo);
+        if(Lista.getInstance().busca(Nome)){
+            if(Lista.getInstance().busca(Amigo)){
+                Lista.getInstance().adicionar(Nome, Amigo);
                 JOptionPane.showMessageDialog(null, "Amigo adicionado!");
             } else {
                 JOptionPane.showMessageDialog(null, "Uma das duas pessoas não está cadastrada");
