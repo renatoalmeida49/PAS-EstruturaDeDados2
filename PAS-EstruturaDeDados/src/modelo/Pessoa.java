@@ -16,7 +16,7 @@ public class Pessoa {
         this.cpf = cpf;
         this.sexo = sexo;
         this.email = email;
-        this.amigos = null;
+        this.amigos = new ArrayList<>();
     }
 
     public String getNome() {
